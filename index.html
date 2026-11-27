@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160f20">
+<title>For Fufu 💍</title>
+<style>
+:root{--pink:#ff8fb1;--gold:#ffd98b;--ink:#21152a;--cream:#fff8f2}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--cream);
+background:radial-gradient(circle at 15% 15%,#65334e 0,transparent 32%),radial-gradient(circle at 90% 80%,#4d315d 0,transparent 35%),linear-gradient(145deg,#160f20,#28172c 55%,#171323);
+display:grid;place-items:center;padding:22px;overflow-x:hidden}
+main{width:min(100%,620px);position:relative}
+.card{background:#ffffff10;border:1px solid #ffffff25;backdrop-filter:blur(14px);border-radius:28px;padding:clamp(24px,6vw,42px);box-shadow:0 24px 80px #0006;text-align:center}
+.eyebrow{color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;font-weight:800}
+h1{font-size:clamp(2.2rem,9vw,4.2rem);line-height:1.03;margin:16px 0;color:#fff}
+h2{font-size:clamp(1.6rem,6vw,2.4rem);margin:12px 0}
+p{font-size:1.08rem;line-height:1.75;color:#f8eefa}
+.highlight{color:var(--gold);font-weight:800}
+.emoji{font-size:3rem;margin:12px}
+button{border:0;border-radius:999px;padding:14px 24px;font-size:1rem;font-weight:800;cursor:pointer;background:linear-gradient(110deg,var(--pink),var(--gold));color:#2b1728;box-shadow:0 8px 24px #0003;transition:transform .18s}
+button:hover{transform:translateY(-2px)}
+.secondary{background:#ffffff18;color:white;border:1px solid #ffffff35;box-shadow:none;margin-left:8px}
+.progress{height:5px;background:#ffffff20;border-radius:9px;overflow:hidden;margin:0 0 22px}
+.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--pink),var(--gold));width:25%;transition:width .3s}
+.step{display:none;animation:rise .35s ease}.step.active{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0}
+.pills span{border:1px solid #ffffff2c;background:#ffffff10;padding:8px 12px;border-radius:999px;font-size:.85rem}
+.qr{width:min(100%,310px);border-radius:20px;background:white;padding:8px;margin:14px auto;display:block}
+.note{font-size:.86rem;color:#d9c8dc}
+.amount{font-size:clamp(2.8rem,12vw,4.8rem);font-weight:900;color:var(--gold);letter-spacing:-.05em;margin:8px}
+.copyline{display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0}
+.copyline code{background:#0004;border:1px solid #ffffff25;padding:10px 12px;border-radius:10px;color:white}
+footer{text-align:center;color:#c9b7cd;font-size:.78rem;margin-top:16px}
+.confetti{position:fixed;top:-20px;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+<main>
+  <div class="progress"><span id="bar"></span></div>
+  <section class="card">
+    <div class="step active">
+      <div class="eyebrow">A very important announcement ✨</div>
+      <div class="emoji">💌</div>
+      <h1>Oye Fufu!</h1>
+      <p>Aaj ka din toh officially <span class="highlight">tumhara main-character moment</span> hai!</p>
+      <p>Shaadi ki dher saari badhaiyaan! May your big day be full of pyaar, hasi, dancing and memories you'll talk about forever. 🥹</p>
+      <button onclick="next()">Aage dekho →</button>
+    </div>
+
+    <div class="step">
+      <div class="eyebrow">Compliment department 💐</div>
+      <div class="emoji">👑</div>
+      <h2>Honestly, Fufu…</h2>
+      <p>Tumhari energy hi alag hai. Sweetness, confidence aur thoda sa drama — perfect combination! Aaj toh poori shaadi mein tum hi spotlight ho.</p>
+      <div class="pills"><span>✨ Full of charm</span><span>💗 Golden heart</span><span>🌸 One of a kind</span></div>
+      <button onclick="next()">Aur suno… →</button>
+    </div>
+
+    <div class="step">
+      <div class="eyebrow">One more thing 🥂</div>
+      <div class="emoji">🫶</div>
+      <h2>Bas khush rehna!</h2>
+      <p>Nayi journey ke liye loads of love. Tum dono ki life laughter, respect, adventures aur endless happy moments se bhari rahe.</p>
+      <p><span class="highlight">Aaj ke liye officially: Fufu = Star of the show.</span> No arguments allowed. 😌</p>
+      <button onclick="next()">Ab asli baat… 👀</button>
+    </div>
+
+    <div class="step">
+      <div class="eyebrow">A humble request 😂</div>
+      <div class="emoji">🧾</div>
+      <h2>My wedding attendance situation</h2>
+      <p>Fufu, dil se toh main shaadi mein present hoon… bas body ki taraf se thodi technical difficulty hai. 😭</p>
+      <p>Isliye meri non-attendance ka ek chhota sa <span class="highlight">consolation / shagun contribution</span> banta hai.</p>
+      <div class="amount">₹5,100</div>
+      <p>Haan ji, exactly five thousand one hundred. Isse meri taraf se virtual entry, blessings aur imaginary dance performance consider kar lena. 💃</p>
+      <button onclick="next()">Payment details dekhein 💸</button>
+    </div>
+
+    <div class="step">
+      <div class="eyebrow">The totally unofficial Fufu fund 💛</div>
+      <h2>Scan karo, Fufu! 📲</h2>
+      <p>₹5,100 bhejna ho toh yeh QR use kar sakti ho. <span class="highlight">No pressure — bas pyaar aur mazaak ke saath request hai.</span></p>
+      <img class="qr" src="fufu_wedding_qr.png" alt="Aman’s payment QR code">
+      <div class="copyline"><code id="upi">aman26052009@fam</code><button class="secondary" onclick="copyUPI()">Copy UPI</button></div>
+      <p class="note">Payment karne se pehle app mein recipient name verify kar lena. ❤️</p>
+      <p>Once again, congratulations Fufu! Ab khush raho, khoob nacho, aur meri taraf se extra mithai kha lena. 🥳</p>
+      <button onclick="celebrate()">Send virtual shagun 🎉</button>
+      <button class="secondary" onclick="restart()">Replay ↺</button>
+      <div id="copied" class="note" aria-live="polite"></div>
+    </div>
+  </section>
+  <footer>Made with pyaar, blessings & a very creative budget request. 💌</footer>
+</main>
+<script>
+let current=0;
+const steps=[...document.querySelectorAll('.step')];
+function show(){steps.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('bar').style.width=((current+1)/steps.length*100)+'%';}
+function next(){if(current<steps.length-1){current++;show();}}
+function restart(){current=0;show();}
+function copyUPI(){const t=document.getElementById('upi').textContent;navigator.clipboard?.writeText(t).then(()=>document.getElementById('copied').textContent='UPI ID copied! 💛').catch(()=>document.getElementById('copied').textContent='UPI ID: '+t);}
+function celebrate(){for(let i=0;i<55;i++){const e=document.createElement('span');e.className='confetti';e.textContent=['💖','✨','🌸','🎉','💛'][Math.floor(Math.random()*5)];e.style.left=Math.random()*100+'vw';e.style.animationDuration=(2+Math.random()*3)+'s';e.style.fontSize=(14+Math.random()*18)+'px';document.body.appendChild(e);setTimeout(()=>e.remove(),5200);}document.getElementById('copied').textContent='Virtual shagun received! Fufu, have the best wedding ever! 🥳';}
+</script>
+</body>
+</html>
